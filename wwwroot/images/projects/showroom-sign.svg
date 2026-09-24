@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#30435F"/>
+      <stop offset="1" stop-color="#0E131B"/>
+    </linearGradient>
+    <linearGradient id="shop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#322B22"/>
+      <stop offset="1" stop-color="#191610"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="800" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="22" stdDeviation="28" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#night)"/>
+  <rect y="620" width="1200" height="180" fill="#0C1016"/>
+  <g opacity="0.22" stroke="#FFFFFF">
+    <path d="M78 76h1044"/>
+    <path d="M78 108h1044"/>
+    <path d="M78 140h1044"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="134" y="188" width="932" height="400" rx="24" fill="url(#shop)"/>
+    <rect x="134" y="188" width="932" height="76" rx="24" fill="#0E0F12"/>
+    <rect x="192" y="300" width="816" height="212" rx="22" fill="#12110F"/>
+  </g>
+  <g>
+    <rect x="242" y="364" width="716" height="76" rx="18" fill="#1A1814" stroke="#6B5B35"/>
+    <text x="600" y="418" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" font-weight="800" fill="#F5B623" style="text-shadow:0 0 14px rgba(245,182,35,0.5)">AN GIA SHOWROOM</text>
+    <text x="600" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4" fill="#FBF4D9">CHỮ NỔI • LED HẮT SÁNG • MẶT DỰNG ALU</text>
+  </g>
+  <g>
+    <circle cx="268" cy="402" r="14" fill="#FFCD4C"/>
+    <circle cx="932" cy="402" r="14" fill="#FFCD4C"/>
+    <circle cx="268" cy="402" r="28" stroke="#FFCD4C" stroke-opacity="0.2" stroke-width="12"/>
+    <circle cx="932" cy="402" r="28" stroke="#FFCD4C" stroke-opacity="0.2" stroke-width="12"/>
+  </g>
+  <g fill="#20242B">
+    <rect x="222" y="524" width="212" height="48" rx="14"/>
+    <rect x="494" y="524" width="212" height="48" rx="14"/>
+    <rect x="766" y="524" width="212" height="48" rx="14"/>
+  </g>
+  <text x="86" y="742" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#B3BBC7">Hình minh hoạ cho biển showroom / cửa hàng chữ nổi có LED.</text>
+</svg>

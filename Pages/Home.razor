@@ -60,13 +60,23 @@
 
     <section class="projects section-pad" id="projects">
         <div class="container">
-            <div class="section-heading"><div><div class="eyebrow light"><span></span> Công trình tiêu biểu</div><h2>Một vài mẫu tại Hải Phòng.</h2></div><p class="light-copy">Dữ liệu và hình minh hoạ đang dùng để dựng bản demo. Khi có ảnh thật của bác, chỉ cần thay vào là thành portfolio thật.</p></div>
+            <div class="section-heading"><div><div class="eyebrow light"><span></span> Công trình tiêu biểu</div><h2>Một vài hạng mục nổi bật của bác Nghệ.</h2></div><p class="light-copy">Bổ sung câu chuyện công trình và ảnh minh hoạ để web nhìn thật và sinh động hơn. Sau này chỉ cần thay bằng ảnh chụp thực tế là thành portfolio hoàn chỉnh.</p></div>
             <div class="project-grid">
                 @foreach (var p in Projects)
                 {
                     <article class="project-card">
-                        <div class="project-art @p.Style"><div class="fake-shop"><span>@p.MockTitle</span><small>@p.MockSub</small></div></div>
-                        <div class="project-meta"><div><span>@p.Type</span><h3>@p.Title</h3></div><small>@p.Area</small></div>
+                        <div class="project-art photo-art">
+                            <img src="@p.Image" alt="@p.Title" />
+                            <span class="photo-badge">Ảnh minh hoạ</span>
+                        </div>
+                        <div class="project-meta rich-project-meta">
+                            <div>
+                                <span>@p.Type</span>
+                                <h3>@p.Title</h3>
+                                <p>@p.Desc</p>
+                            </div>
+                            <small>@p.Area</small>
+                        </div>
                     </article>
                 }
             </div>
@@ -111,10 +121,10 @@
         ("03","▤","Hộp đèn & biển vẫy","Hộp đèn một mặt, hai mặt, biển vẫy và bảng menu phù hợp cửa hàng, quán ăn."),
         ("04","⌁","Thi công & cải tạo","Lắp mới, thay mặt biển, sửa đèn, gia cố khung và làm mới hệ biển hiệu cũ.")
     };
-    private readonly (string Type,string Title,string Area,string Style,string MockTitle,string MockSub)[] Projects = {
-        ("Chữ nổi + LED","Biển showroom nội thất","Lê Chân, Hải Phòng","art-a","NỘI THẤT AN GIA","Không gian đẹp • Sống chất"),
-        ("Alu + mica","Biển cửa hàng thời trang","Ngô Quyền, Hải Phòng","art-b","MÉLAN STUDIO","FASHION • ACCESSORIES"),
-        ("Hộp đèn","Biển quán cà phê","Hồng Bàng, Hải Phòng","art-c","BẾN CÀ PHÊ","coffee & stories")
+    private readonly (string Type,string Title,string Area,string Image,string Desc)[] Projects = {
+        ("Biển trường học","Biển Trường mầm non Hạ Long","Hạ Long / khu vực công trình thực tế","images/projects/halong-kindergarten.svg","Biển cổng trường nổi bật, tông màu vui tươi, ưu tiên dễ nhìn và tạo cảm giác thân thiện cho phụ huynh và học sinh."),
+        ("Backdrop sự kiện","Hạng mục backdrop cho sự kiện lớn","Thi công theo từng chương trình","images/projects/event-backdrop.svg","Thiết kế backdrop sân khấu, biển chào đón và hạng mục nhận diện cho các chương trình, lễ khai trương hoặc sự kiện doanh nghiệp."),
+        ("Chữ nổi + LED","Biển showroom / cửa hàng","Hải Phòng và khu vực lân cận","images/projects/showroom-sign.svg","Biển mặt tiền dạng alu kết hợp chữ nổi có LED, giúp cửa hàng sáng rõ buổi tối và nhìn chắc tay, gọn gàng." )
     };
     private Task SubmitForm(){ Submitted = true; return Task.CompletedTask; }
     private sealed class QuoteForm { public string Name {get;set;}=""; public string Phone {get;set;}=""; public string Service {get;set;}="Biển quảng cáo"; public string Note {get;set;}=""; }
