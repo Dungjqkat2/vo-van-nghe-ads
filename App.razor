@@ -1,0 +1,12 @@
+<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(Layout.MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <PageTitle>Không tìm thấy trang</PageTitle>
+        <LayoutView Layout="@typeof(Layout.MainLayout)">
+            <div class="not-found"><h1>404</h1><p>Trang bạn tìm không tồn tại.</p><a class="btn btn-primary" href="/">Về trang chủ</a></div>
+        </LayoutView>
+    </NotFound>
+</Router>

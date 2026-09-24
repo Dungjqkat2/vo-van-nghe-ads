@@ -1,0 +1,121 @@
+@page "/"
+@inject IJSRuntime JS
+
+<PageTitle>Võ Văn Nghệ | Biển quảng cáo Hải Phòng</PageTitle>
+
+<header class="site-header" id="top">
+    <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="Trang chủ">
+            <span class="brand-mark">VN</span>
+            <span><b>Võ Văn Nghệ</b><small>Quảng cáo & thi công</small></span>
+        </a>
+        <nav class="desktop-nav">
+            <a href="#services">Dịch vụ</a><a href="#projects">Công trình</a><a href="#about">Giới thiệu</a><a href="#contact">Liên hệ</a>
+        </nav>
+        <a class="btn btn-dark btn-small" href="tel:+84904382779">Gọi 0904 382 779</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero section-pad">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <div class="eyebrow"><span></span> Thiết kế • Sản xuất • Lắp đặt tại Hải Phòng</div>
+                <h1>Làm biển <em>đẹp, chắc, sáng</em> — từ bản vẽ đến khi treo lên.</h1>
+                <p class="hero-desc">Nhận thiết kế và thi công biển quảng cáo cửa hàng, chữ nổi, hộp đèn, alu, mica, LED và hạng mục nhận diện. Khảo sát tận nơi, tư vấn rõ vật liệu, làm gọn và đúng hẹn.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="tel:+84904382779">Gọi tư vấn <span>→</span></a>
+                    <a class="btn btn-ghost" href="https://zalo.me/84904382779" target="_blank" rel="noopener">Nhắn Zalo</a>
+                </div>
+                <div class="hero-trust">
+                    <div><b>Hải Phòng</b><span>Nhận khảo sát tận nơi</span></div>
+                    <div><b>Nhanh gọn</b><span>Tư vấn theo nhu cầu thực tế</span></div>
+                    <div><b>Đường dài</b><span>Có thêm dịch vụ lái xe</span></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="sign-stage">
+                    <div class="building-lines"></div>
+                    <div class="main-sign"><span>NGHỆ</span><small>QUẢNG CÁO • HẢI PHÒNG</small></div>
+                    <div class="mini-card card-one"><span class="dot green"></span><b>Khảo sát tận nơi</b><small>Hải Phòng & khu vực lân cận</small></div>
+                    <div class="mini-card card-two"><span class="rating">★★★★★</span><b>Làm kỹ từng chi tiết</b><small>Từ khung, mặt biển tới ánh sáng</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="marquee"><div>BIỂN ALU <span>✦</span> CHỮ NỔI MICA <span>✦</span> HỘP ĐÈN <span>✦</span> LED <span>✦</span> BIỂN CÔNG TY <span>✦</span> BACKDROP <span>✦</span></div></section>
+
+    <section class="section-pad" id="services">
+        <div class="container">
+            <div class="section-heading"><div><div class="eyebrow"><span></span> Dịch vụ chính</div><h2>Một đầu mối cho toàn bộ phần biển hiệu.</h2></div><p>Từ ý tưởng ban đầu đến khâu lắp đặt hoàn thiện, ưu tiên phương án bền, dễ bảo trì và đúng ngân sách.</p></div>
+            <div class="service-grid">
+                @foreach (var s in Services)
+                {
+                    <article class="service-card"><div class="service-icon">@s.Icon</div><div><span class="service-no">@s.No</span><h3>@s.Title</h3><p>@s.Desc</p></div></article>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="projects section-pad" id="projects">
+        <div class="container">
+            <div class="section-heading"><div><div class="eyebrow light"><span></span> Công trình tiêu biểu</div><h2>Một vài mẫu tại Hải Phòng.</h2></div><p class="light-copy">Dữ liệu và hình minh hoạ đang dùng để dựng bản demo. Khi có ảnh thật của bác, chỉ cần thay vào là thành portfolio thật.</p></div>
+            <div class="project-grid">
+                @foreach (var p in Projects)
+                {
+                    <article class="project-card">
+                        <div class="project-art @p.Style"><div class="fake-shop"><span>@p.MockTitle</span><small>@p.MockSub</small></div></div>
+                        <div class="project-meta"><div><span>@p.Type</span><h3>@p.Title</h3></div><small>@p.Area</small></div>
+                    </article>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad" id="about">
+        <div class="container about-grid">
+            <div class="about-card"><div class="portrait portrait-photo"><img src="bac-nghe.png" alt="Bác Võ Văn Nghệ" /></div><div class="about-caption"><b>Võ Văn Nghệ</b><span>Thiết kế & thi công quảng cáo</span></div></div>
+            <div class="about-copy"><div class="eyebrow"><span></span> Người trực tiếp làm việc</div><h2>Làm nghề bằng kinh nghiệm thực tế, không vòng vo.</h2><p>Bác Nghệ trực tiếp trao đổi nhu cầu, khảo sát, tư vấn vật liệu và theo sát quá trình thi công. Mục tiêu là để khách hiểu mình đang làm gì, dùng vật liệu nào và chi phí nằm ở đâu.</p><div class="check-list"><span>✓ Tư vấn theo mặt bằng thực tế</span><span>✓ Thi công gọn, chú ý độ chắc chắn</span><span>✓ Nhận công trình tại Hải Phòng và lân cận</span></div></div>
+        </div>
+    </section>
+
+    <section class="driver-section">
+        <div class="container driver-grid"><div><div class="eyebrow light"><span></span> Dịch vụ bổ sung</div><h2>Cần người lái xe đường dài?</h2><p>Ngoài công việc quảng cáo, bác Nghệ có kinh nghiệm lái xe lâu năm, nhận lái theo lịch hẹn: đi tỉnh, công tác, sân bay hoặc hành trình dài.</p></div><a href="#contact" class="btn btn-light">Trao đổi lịch đi →</a></div>
+    </section>
+
+    <section class="section-pad contact-section" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-copy"><div class="eyebrow"><span></span> Liên hệ</div><h2>Gửi nhu cầu, bác Nghệ sẽ trao đổi lại.</h2><p>Có thể gọi trực tiếp hoặc nhắn Zalo để trao đổi nhu cầu, gửi ảnh mặt bằng và nhận tư vấn sơ bộ.</p><div class="contact-cards"><div><small>Khu vực</small><b>Hải Phòng</b></div><div><small>Điện thoại / Zalo</small><b><a class="contact-link" href="tel:+84904382779">0904 382 779</a></b><span class="contact-inline"><a href="https://zalo.me/84904382779" target="_blank" rel="noopener">Nhắn Zalo →</a></span></div></div></div>
+            <EditForm Model="Form" OnValidSubmit="SubmitForm" class="quote-form">
+                <DataAnnotationsValidator />
+                <div class="field"><label>Họ và tên</label><InputText @bind-Value="Form.Name" placeholder="Anh/chị tên gì?" /></div>
+                <div class="field"><label>Số điện thoại</label><InputText @bind-Value="Form.Phone" placeholder="Số để liên hệ" /></div>
+                <div class="field"><label>Dịch vụ</label><InputSelect @bind-Value="Form.Service"><option value="Biển quảng cáo">Biển quảng cáo</option><option value="Lái xe theo yêu cầu">Lái xe theo yêu cầu</option></InputSelect></div>
+                <div class="field"><label>Mô tả nhu cầu</label><InputTextArea @bind-Value="Form.Note" placeholder="Ví dụ: biển cửa hàng 5m, cần chữ nổi có LED..." /></div>
+                <button class="btn btn-primary full" type="submit">Gửi yêu cầu <span>→</span></button>
+                @if (Submitted) { <div class="success-msg">✓ Bản demo đã nhận thông tin. Khi deploy thật, phần này có thể chuyển sang Zalo hoặc lưu database.</div> }
+            </EditForm>
+        </div>
+    </section>
+</main>
+
+<footer><div class="container footer-row"><div class="brand inverse"><span class="brand-mark">VN</span><span><b>Võ Văn Nghệ</b><small>Quảng cáo & thi công</small></span></div><p>© 2026 • Hải Phòng • Website giới thiệu dịch vụ</p><a href="#top">Lên đầu trang ↑</a></div></footer>
+
+@code {
+    private bool Submitted;
+    private QuoteForm Form = new();
+    private readonly (string No,string Icon,string Title,string Desc)[] Services = {
+        ("01","▣","Biển quảng cáo cửa hàng","Alu, mica, chữ nổi, inox, formex và nhiều phương án theo mặt tiền thực tế."),
+        ("02","✦","Chữ nổi & LED","Thiết kế chữ nổi có đèn, logo, viền sáng và hệ thống LED cho nhận diện ban đêm."),
+        ("03","▤","Hộp đèn & biển vẫy","Hộp đèn một mặt, hai mặt, biển vẫy và bảng menu phù hợp cửa hàng, quán ăn."),
+        ("04","⌁","Thi công & cải tạo","Lắp mới, thay mặt biển, sửa đèn, gia cố khung và làm mới hệ biển hiệu cũ.")
+    };
+    private readonly (string Type,string Title,string Area,string Style,string MockTitle,string MockSub)[] Projects = {
+        ("Chữ nổi + LED","Biển showroom nội thất","Lê Chân, Hải Phòng","art-a","NỘI THẤT AN GIA","Không gian đẹp • Sống chất"),
+        ("Alu + mica","Biển cửa hàng thời trang","Ngô Quyền, Hải Phòng","art-b","MÉLAN STUDIO","FASHION • ACCESSORIES"),
+        ("Hộp đèn","Biển quán cà phê","Hồng Bàng, Hải Phòng","art-c","BẾN CÀ PHÊ","coffee & stories")
+    };
+    private Task SubmitForm(){ Submitted = true; return Task.CompletedTask; }
+    private sealed class QuoteForm { public string Name {get;set;}=""; public string Phone {get;set;}=""; public string Service {get;set;}="Biển quảng cáo"; public string Note {get;set;}=""; }
+}
