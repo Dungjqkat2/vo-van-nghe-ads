@@ -25,3 +25,11 @@
 .process-card p{font-size:12px;color:var(--muted);margin:0;line-height:1.7}
 @media(max-width:900px){.process-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.process-grid{grid-template-columns:1fr}.process-card{min-height:0}}
+
+.driver-extra-section{background:#171713;color:#fff;padding:52px 0;border-top:1px solid rgba(255,255,255,.08)}
+.driver-extra-grid{display:grid;grid-template-columns:1fr auto;align-items:center;gap:48px}
+.driver-extra-grid h2{font-size:clamp(32px,3.4vw,48px);line-height:1.08;letter-spacing:-.04em;margin:12px 0}
+.driver-extra-grid p{max-width:760px;color:#b9b6ae;margin:0;font-size:14px}
+.driver-extra-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.driver-ghost{color:#fff;border-color:#5d5a52}
+@media(max-width:900px){.driver-extra-grid{grid-template-columns:1fr}.driver-extra-actions{justify-content:flex-start}}
